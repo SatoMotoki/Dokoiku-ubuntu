@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: dokoiku_production
-  username: dokoiku
-  password: <%= ENV['DOKOIKU_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
