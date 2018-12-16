@@ -40,6 +40,7 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'pry-stack_explorer'
   gem 'bootstrap'
   gem 'jquery-rails'
+  gem 'font-awesome-rails'
 # =========================
 
 
