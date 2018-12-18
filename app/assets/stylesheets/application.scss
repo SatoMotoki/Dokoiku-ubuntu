@@ -1,3 +1,14 @@
 @import "bootstrap";
 @import "pages";
-@import "font-awesome"
+@import "font-awesome";
+@import "users";
+@import "sessions";
+
+.main-h2 {
+  font-size: 24px;
+  border-bottom: 4px solid #A82400;
+}
+
+.main-row {
+  font-size: .8rem;
+}

@@ -13,7 +13,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">どこいく？</a>
+        <a class="navbar-brand" href=/>どこいく？</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,19 +21,19 @@
         <div class="collapse navbar-collapse" id="navbarsExample04">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">直近のイベント</a>
+              <%= link_to "直近のイベント", "#", class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">カレンダー</a>
+              <%= link_to "カレンダー", "#", class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ログイン|新規登録</a>
+              <%= link_to "ログイン|新規登録", sessions_new_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">イベント作成</a>
+              <%= link_to "イベント作成", "#", class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">イベント編集</a>
+              <%= link_to "イベント編集", "#", class: "nav-link" %>
             </li>
           </ul>
         </div>

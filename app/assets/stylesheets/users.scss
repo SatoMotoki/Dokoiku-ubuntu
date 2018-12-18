@@ -1,0 +1,28 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.type {
+  display: block;
+  color: #009FE6;
+}
+
+.notice {
+  display: block;
+}
+
+.signup-main {
+  font-size: .8rem;
+}
+
+th {
+  vertical-align: middle !important;
+  font-weight: normal;
+}
+
+.signup-form {
+  width: 300px;
+}
+
+.signup-btn {
+  text-align:center;
+}
