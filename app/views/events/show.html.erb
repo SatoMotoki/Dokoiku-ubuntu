@@ -1,17 +1,31 @@
-<div class="container">
-  <div class="row mb-2">
-  <div class="col-md-6">
-    <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-      <div class="card-body d-flex flex-column align-items-start">
-        <strong class="d-inline-block mb-2 text-primary">World</strong>
-        <h3 class="mb-0">
-          <a class="text-dark" href="#">Featured post</a>
-        </h3>
-        <div class="mb-1 text-muted">Nov 12</div>
-        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <a href="#">Continue reading</a>
+<div class="py-5 bg-light">
+  <div class="container">
+    <h2 class="main-h2 mb-4">イベントA</h2>
+    <div class="row border-bottom border-secondary">
+      <div class="col-md-6">
+        <%= image_tag 'kisetsukan_nai_man.png', class: 'card-img-top', alt: 'イベント画像'%>
       </div>
-      <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+      <div class="col-md-6">
+        <h5>イベント説明</h5>
+        <p>とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ </p>
+        <h5> <概要> </h5>
+        <p>日付：2020/12/31</p>
+        <p>時間：99:99~</p>
+        <p>会場：花泉ぼたん園</p>
+        <p>住所：岩手県一関市〜〜〜</p>
+        <p>入場料：無料</p>
+        <p>イベント投稿者：ユーザーA</p>
+      </div>
     </div>
+    <div class="comment-area pb-2 mb-3">
+      <h6 class="comments-title mt-3">コメント</h6>
+      <input class="comment-input-text rounded border border-secondary" type="text" name="Comment" value="">
+      <div class="comment-btn mt-2">
+        <input class="btn btn-sm" type="submit" name="" value="投稿する">
+      </div>
+    </div>
+    <p class="comment-text mb-1">ユーザーB：とても楽しかったです！</p>
+    <p class="comment-text mb-1">ユーザーC：また来年も行きたいです</p>
+    <p class="comment-text mb-1">ユーザーD：微妙でした・・・</p>
   </div>
 </div>
