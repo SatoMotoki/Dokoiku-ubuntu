@@ -17,3 +17,64 @@
 .comment-text {
   border-bottom: 1px dotted #777;
 }
+
+.events-index-wrapper {
+  font-size: 12px;
+}
+
+.index-event-list {
+  border-bottom: 1px solid #CCC;
+  padding-left: 110px;
+  margin-bottom: 10px;
+  position: relative;
+
+  .index-event-schedule-area {
+    position: absolute;
+    margin-top: 15px;
+    left: 0;
+    text-align: center;
+    padding-right: 10px;
+    width: 100px;
+    font-weight: bold;
+  }
+
+  .year {
+    margin: 0;
+    text-align: left;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  .date {
+    margin: 0;
+    font-size: 27px;
+  }
+
+}
+
+.upcoming-event-inner {
+  position: relative;
+  padding-left: 114px;
+  min-height: 100px;
+
+  .index-event-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    font-size: 0;
+
+  }
+  .index-event-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 28px;
+    margin: 0;
+  }
+
+  .index-event-adress {
+    padding-top: 8px;
+    margin: 0;
+  }
+}

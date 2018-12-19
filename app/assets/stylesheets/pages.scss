@@ -11,15 +11,17 @@
 
 .card-body {
   padding: 0.5rem;
-}
 
-.event-day {
-  font-size: 80%;
-}
-.event-adress {
-  font-size: 70% !important;
-}
+  .event-title {
+    border-bottom: 1px solid #343a40;
+  }
 
-.copyright {
-  font-size: 12px;
+  .event-day {
+    font-size: 80%;
+  }
+
+  .event-adress {
+    font-size: 70% !important;
+  }
+
 }
