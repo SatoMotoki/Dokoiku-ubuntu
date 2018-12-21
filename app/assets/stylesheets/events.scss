@@ -1,10 +1,12 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// イベント詳細ページ
+
 .comment-area {
   border-bottom: 1px solid #E6E6E6;
 }
-
 
 .comment-input-text {
   width: 100%;
@@ -17,6 +19,8 @@
 .comment-text {
   border-bottom: 1px dotted #777;
 }
+
+// イベント詳細ページ
 
 .events-index-wrapper {
   font-size: 12px;
@@ -47,7 +51,7 @@
 
   .date {
     margin: 0;
-    font-size: 27px;
+    font-size: 2em;
   }
 
 }
@@ -63,8 +67,8 @@
     left: 0;
     width: 100px;
     font-size: 0;
-
   }
+
   .index-event-title {
     font-size: 20px;
     font-weight: bold;
@@ -78,3 +82,59 @@
     margin: 0;
   }
 }
+
+.eventcreate-form {
+  width: 300px;
+}
+
+.edit-btn {
+  text-align: right;
+}
+
+// イベント管理ページ
+
+.manage-event-list {
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 10px;
+
+  .manage-event-schedule-area {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+
+    .year {
+      margin: 0;
+      text-align: left;
+      line-height: 1;
+      font-weight: normal;
+    }
+
+    .date {
+      margin: 0;
+      font-size: 2em;
+    }
+  }
+
+    .manage-event-image {
+      width: 100px;
+    }
+
+    .manage-event-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: underline;
+      padding-top: 28px;
+      margin: 0;
+    }
+
+    .manage-event-adress {
+      padding-top: 8px;
+      margin: 0;
+    }
+
+    .manage-btn {
+      text-align: right;
+    }
+  }
+
+// イベント管理ページ
