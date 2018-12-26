@@ -1,0 +1,58 @@
+<div class="py-5 bg-light">
+  <div class="container">
+    <h2 class="main-h2 mb-4">新規会員登録</h2>
+    <div class="row main-row">
+      <div class="offset-md-1 col-md-10">
+        <p class="desc-row">以下の項目を全て入力して「新規会員登録する」ボタンをクリックしてください。<br/>すでに会員登録をしている方は<%= link_to "こちらからログイン", new_user_session_path %>できます。</p>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th>
+                <%= f.label "ユーザー名" %><br />
+              </th>
+              <td>
+                <span class="type">半角英数字で15文字以内</span>
+                <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "signup-form" %>
+                <span class="notice">※サイト内IDとしても利用します。</span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label "メールアドレス" %><br />
+              </th>
+              <td>
+                <%= f.email_field :email, autocomplete: "email", class: "signup-form" %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label "パスワード" %>
+              </th>
+              <td>
+                <span class="type">半角英数字で6文字以上</span>
+                <%= f.password_field :password, autocomplete: "new-password", class: "signup-form"  %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label "パスワード（確認用）" %><br />
+              </th>
+              <td>
+                <span class="type">半角英数字で6文字以上</span>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "signup-form"  %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+    <div class="signup-btn">
+      <%= f.submit "新規会員登録する", class: "btn" %>
+    </div>
+    <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

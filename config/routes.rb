@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'events/edit'
   get 'events/manage'
   get 'events/new'

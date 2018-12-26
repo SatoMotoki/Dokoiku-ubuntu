@@ -41,6 +41,7 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'bootstrap'
   gem 'jquery-rails'
   gem 'font-awesome-rails'
+  gem 'devise'
 # =========================
 
 
