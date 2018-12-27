@@ -42,6 +42,8 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'jquery-rails'
   gem 'font-awesome-rails'
   gem 'devise'
+  gem 'devise-i18n'
+  gem 'devise-i18n-views'
 # =========================
 
 
