@@ -44,6 +44,7 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'devise'
   gem 'devise-i18n'
   gem 'devise-i18n-views'
+  gem 'omniauth-twitter'
 # =========================
 
 

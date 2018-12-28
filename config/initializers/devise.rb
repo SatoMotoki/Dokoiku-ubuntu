@@ -18,7 +18,9 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  
+  # メール設定
+  config.mailer_sender = 'dokoiku03@gmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -256,6 +258,10 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
+
+  # twitter設定
+  config.omniauth :twitter, "7qfQ2fk8E9T3gOnEivR9KH6Sv", "muLdGCNf1PbvrCS0JLdcxrcts448DSxq2xMWFcbtIy79Y7rLQa"
+
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   # ==> Warden configuration
