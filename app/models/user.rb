@@ -6,8 +6,8 @@ class User < ApplicationRecord
          :confirmable, :lockable, :timeoutable,
          :omniauthable, omniauth_providers: [:twitter]
 
-  # validates :name, presence: true, length: {maximum: 15}, uniqueness: true
-  # validates :email, length: {maximum: 100}
+  validates :username, presence: true, length: {maximum: 30}, uniqueness: true
+  validates :email, length: {maximum: 100}
 
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
