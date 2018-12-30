@@ -16,7 +16,10 @@ module Dokoiku
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    #i18n 初期設定
+    # i18n 初期設定
     config.i18n.default_locale = :ja
+
+    # heroku 会員登録メール設定
+    config.assets.initialize_on_precompile = false
   end
 end

@@ -18,9 +18,9 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  
+
   # メール設定
-  config.mailer_sender = 'dokoiku03@gmail.com'
+  config.mailer_sender = '"Dokoiku" <service@example.com>'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -260,7 +260,9 @@ Devise.setup do |config|
   # up on your models and hooks.
 
   # twitter設定
-  config.omniauth :twitter, "7qfQ2fk8E9T3gOnEivR9KH6Sv", "muLdGCNf1PbvrCS0JLdcxrcts448DSxq2xMWFcbtIy79Y7rLQa"
+  twitter_consumer_key = ENV['TWITTER_CONSUMER_KEY']
+  twitter_consumer_secret = ENV['TWITTER_CONSUMER_SECRET']
+  config.omniauth :twitter, twitter_consumer_key, twitter_consumer_secret
 
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 

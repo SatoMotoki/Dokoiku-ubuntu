@@ -45,6 +45,8 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'devise-i18n'
   gem 'devise-i18n-views'
   gem 'omniauth-twitter'
+  gem 'rails_12factor', group: :production
+  gem 'dotenv-rails'
 # =========================
 
 
