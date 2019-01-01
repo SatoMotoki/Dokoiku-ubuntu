@@ -93,7 +93,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # devise heroku対応設定
-  sendgrid_user_name = ENV['SENDGRID_USER_NAME']
+  sendgrid_user_name = ENV['SENDGRID_USERNAME']
   sendgrid_password = ENV['SENDGRID_PASSWORD']
 
   config.action_mailer.default_url_options = { :host => 'http://dokoiku-ubuntu.herokuapp.com'}
