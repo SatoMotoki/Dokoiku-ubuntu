@@ -4,65 +4,101 @@
     <div class="row main-row">
         <div class="offset-md-1 col-md-10">
           <p class="desc-row">以下の項目を全て入力して「イベント作成する」ボタンをクリックしてください。</p>
-          <table class="table table-bordered">
-            <tbody>
+
+          <%= form_for @event do |f| %>
+            <table class="table table-bordered">
+              <tbody>
+
+                  <tr>
+                    <th scope="row">
+                      <%= f.label "タイトル" %>
+                    </th>
+                    <td>
+                      <%= f.text_field :title, autoforcus: true, class: "eventcreate-form" %>
+                    </td>
+                  </tr>
+
                 <tr>
-                  <th scope="row">タイトル</th>
+                  <th scope="row">
+                    <%= f.label "イベント詳細" %>
+                  </th>
                   <td>
-                    <input type="text" class="eventcreate-form" name="title" value="" />
+                    <%= f.text_field :description, class: "eventcreate-form" %>
                   </td>
                 </tr>
-              <tr>
-                <th scope="row">イベント詳細</th>
-                <td>
-                  <input type="text" class="eventcreate-form" name="description" value="" />
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" rowspan="2">開始日時</th>
-                <td>
-                  <input type="date" class="eventcreate-form" name="email" value="" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="time" class="eventcreate-form" name="email" value="" />
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" rowspan="2">終了日時</th>
-                <td>
-                  <input type="date" class="eventcreate-form" name="email" value="" />
-                </td>
-              </tr>
+
                 <tr>
+                  <th scope="row" rowspan="2">
+                    <%= f.label "開始日時" %>
+                  </th>
                   <td>
-                    <input type="time" class="eventcreate-form" name="email" value="" />
+                    <%= f.date_field :start_date, class: "eventcreate-form" %>
                   </td>
                 </tr>
-              <tr>
-                <th scope="row">会場</th>
-                <td>
-                  <input type="text" class="eventcreate-form" name="email" value="" />
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">住所</th>
-                <td>
-                  <input type="password" class="eventcreate-form" name="password1" />
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">イベント画像</th>
-                <td>
-                  <input type="password" class="eventcreate-form" name="password1" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                <tr>
+                  <td>
+                    <%= f.time_field :start_time, class: "eventcreate-form" %>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row" rowspan="2">
+                    <%= f.label "終了日時" %>
+                  </th>
+                  <td>
+                    <%= f.date_field :end_date, class: "eventcreate-form"%>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= f.time_field :end_time, class: "eventcreate-form" %>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <%= f.label "会場" %>
+                  </th>
+                  <td>
+                    <%= f.text_field :venue, class: "eventcreate-form" %>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <%= f.label "住所" %>
+                  </th>
+                  <td>
+                    <%= f.text_field :address, class: "eventcreate-form" %>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <%= f.label "イベント画像" %>
+                  </th>
+                  <td>
+                    <%= f.text_field :image, class: "eventcreate-form" %>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <%= f.label "入場料" %>
+                  </th>
+                  <td>
+                    <%= f.number_field :admission_fee, class: "eventcreate-form" %>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+
           <div class="login-btn">
             <button class="btn" type="submit">イベント作成する</button>
           </div>
+
+          <% end %>
         </div>
     </div>
   </div>

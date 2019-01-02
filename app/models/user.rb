@@ -27,4 +27,7 @@ class User < ApplicationRecord
     end
   end
 
+
+  has_many :events
+
 end
