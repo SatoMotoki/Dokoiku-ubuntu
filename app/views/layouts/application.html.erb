@@ -41,18 +41,23 @@
             <li class="nav-item">
               <%= link_to "カレンダー", "#", class: "nav-link" %>
             </li>
-            <li class="nav-item">
-              <%= link_to "ログイン|新規登録", new_user_session_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "イベント作成", events_new_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "イベント管理", events_manage_path, class: "nav-link" %>
-            </li>
+
+            <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to "イベント作成", events_new_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "イベント管理", events_manage_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to "ログイン|新規登録", new_user_session_path, class: "nav-link" %>
+              </li>
+            <% end %>
+
           </ul>
         </div>
       </nav>
