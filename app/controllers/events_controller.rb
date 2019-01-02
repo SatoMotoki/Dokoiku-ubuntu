@@ -2,6 +2,12 @@ class EventsController < ApplicationController
   def show
   end
 
+  def index
+    @events = Event.all
+    # wd = ["日", "月", "火", "水", "木", "金", "土"]
+
+  end
+
   def new
     @event = Event.new
   end

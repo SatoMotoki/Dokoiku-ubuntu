@@ -21,5 +21,8 @@ module Dokoiku
 
     # heroku 会員登録メール設定
     config.assets.initialize_on_precompile = false
+
+    # carrierwave設定
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
   end
 end

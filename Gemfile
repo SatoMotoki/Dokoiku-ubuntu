@@ -47,6 +47,8 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'omniauth-twitter'
   gem 'rails_12factor', group: :production
   gem 'dotenv-rails'
+  gem 'carrierwave'
+  gem 'mini_magick'
 # =========================
 
 
