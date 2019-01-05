@@ -13,7 +13,7 @@
             <%= "#{event.start_date.mon}/#{event.start_date.day}" %>
           </p>
           <p class="time">
-            <%= "#{event.start_date.strftime("(#{wd[event.start_date.wday]})")} #{event.start_time.hour}:#{event.start_time.min}" %>
+            <%= "#{event.start_date.strftime("(#{wd[event.start_date.wday]})")} #{event.start_time.hour}:#{event.start_time.min}〜" %>
           </p>
         </div>
         <div class="index-event-detail-area">
@@ -27,56 +27,8 @@
             </p>
           </div>
         </div>
+      </div>
     <% end %>
-        </div>
 
-
-      <div class="index-event-list">
-        <div class="index-event-schedule-area">
-          <p class="year">2018</p>
-          <p class="date">12/19</p>
-          <p class="time">（水）16:30〜</p>
-        </div>
-        <div class="index-event-detail-area">
-          <div class="upcoming-event-inner">
-            <%= image_tag 'kisetsukan_nai_man.png', class: 'index-event-image', alt: 'イベント画像'%>
-            <p class="index-event-title">イベントA</p>
-            <p class="fa fa-map-marker text-muted index-event-adress pb-0"> 岩手県一関市~~</p>
-          </div>
-        </div>
-        </div>
-
-      <div class="index-event-list">
-        <div class="index-event-schedule-area">
-          <p class="year">2018</p>
-          <p class="date">12/19</p>
-          <p class="time">（水）16:30〜</p>
-        </div>
-        <div class="index-event-detail-area">
-          <div class="upcoming-event-inner">
-            <%= image_tag 'kisetsukan_nai_man.png', class: 'index-event-image', alt: 'イベント画像'%>
-            <p class="index-event-title">イベントA</p>
-            <p class="fa fa-map-marker text-muted index-event-adress pb-0"> 岩手県一関市~~</p>
-          </div>
-        </div>
-        </div>
-
-      <div class="index-event-list">
-        <div class="index-event-schedule-area">
-          <p class="year">2018</p>
-          <p class="date">12/19</p>
-          <p class="time">（水）16:30〜</p>
-        </div>
-        <div class="index-event-detail-area">
-          <div class="upcoming-event-inner">
-            <%= image_tag 'kisetsukan_nai_man.png', class: 'index-event-image', alt: 'イベント画像'%>
-            <p class="index-event-title">イベントA</p>
-            <p class="fa fa-map-marker text-muted index-event-adress pb-0"> 岩手県一関市~~</p>
-          </div>
-        </div>
-        </div>
-
-    </div>
-    </div>
   </div>
 </div>
