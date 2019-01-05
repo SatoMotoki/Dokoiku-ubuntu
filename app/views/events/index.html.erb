@@ -13,7 +13,7 @@
             <%= "#{event.start_date.mon}/#{event.start_date.day}" %>
           </p>
           <p class="time">
-            <%= "#{event.start_date.strftime("(#{wd[event.start_date.wday]})")} #{event.start_time.hour}:#{event.start_time.min}〜" %>
+            <%= "#{event.start_date.strftime("(#{wd[event.start_date.wday]})")} #{event.start_time.hour}:#{event.start_time.strftime("%d")}〜" %>
           </p>
         </div>
         <div class="index-event-detail-area">
