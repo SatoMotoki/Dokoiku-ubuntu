@@ -1,20 +1,39 @@
+<% wd = ["日", "月", "火", "水", "木", "金", "土"] %>
 <div class="py-5 bg-light">
   <div class="container">
-    <h2 class="main-h2 mb-4">イベントA</h2>
+
+    <h2 class="main-h2 mb-4">
+      <%= @event.title %>
+    </h2>
     <div class="row border-bottom border-secondary">
       <div class="col-md-6">
-        <%= image_tag 'kisetsukan_nai_man.png', class: 'card-img-top', alt: 'イベント画像'%>
+
+        <%= image_tag @event.image.url, class: 'card-img-top', alt: 'イベント画像'%>
       </div>
       <div class="col-md-6">
         <h5>イベント説明</h5>
-        <p>とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ とても楽しいイベントです！ </p>
+        <p>
+          <%= @event.description %>
+        </p>
         <h5> <概要> </h5>
-        <p>日付：2020/12/31</p>
-        <p>時間：99:99~</p>
-        <p>会場：花泉ぼたん園</p>
-        <p>住所：岩手県一関市〜〜〜</p>
-        <p>入場料：無料</p>
-        <p>イベント投稿者：ユーザーA</p>
+        <p>
+          <%= "日付：#{@event.start_date.strftime("%Y/%-m/ %d")} ~ #{@event.end_date.strftime("%Y/%-m/%d")}" %>
+        </p>
+        <p>
+          <%= "時間：#{@event.start_time.strftime("%H:%M")} ~ #{@event.end_time.strftime("%H:%M")}" %>
+        </p>
+        <p>
+          <%= "会場：#{@event.venue}" %>
+        </p>
+        <p>
+          <%= "住所：#{@event.address}" %>
+        </p>
+        <p>
+          <%= "入場料：#{@event.admission_fee}円" %>
+        </p>
+        <p>
+          <%= "イベント投稿者：#{@event.user.username}" %>
+        </p>
       </div>
     </div>
     <div class="comment-area pb-2 mb-3">

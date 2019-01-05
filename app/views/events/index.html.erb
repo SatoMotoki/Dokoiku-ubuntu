@@ -20,7 +20,7 @@
           <div class="upcoming-event-inner">
             <%= image_tag event.image.url, class: 'index-event-image', alt: 'イベント画像'%>
             <p class="index-event-title">
-              <%= event.title %>
+              <%= link_to event.title, "/events/#{event.id}" %>
             </p>
             <p class="fa fa-map-marker text-muted index-event-adress pb-0">
               <%= event.address %>
