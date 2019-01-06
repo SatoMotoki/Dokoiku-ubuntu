@@ -36,13 +36,32 @@
         </p>
       </div>
     </div>
+
     <div class="comment-area pb-2 mb-3">
       <h6 class="comments-title mt-3">コメント</h6>
-      <input class="comment-input-text rounded border border-secondary" type="text" name="Comment" value="">
-      <div class="comment-btn mt-2">
+
+      <%= form_for [@event, @comment] do |f| %>
+        <%= f.text_area :text, class: "comment-input-text rounded border border-secondary" %>
+        <div class="comment-btn mt-2">
+          <%= f.submit "投稿する", class: "btn btn-sm"%>
+        </div>
+      <% end %>
+
+    </div>
+
+      <!-- <input class="comment-input-text rounded border border-secondary" type="text" name="Comment" value=""> -->
+      <!-- <div class="comment-btn mt-2">
         <input class="btn btn-sm" type="submit" name="" value="投稿する">
       </div>
-    </div>
+    </div> -->
+
+    <% @event.comments.each do |comment| %>
+      <p class="comment-text mb-1">
+        <%= "#{comment.user.username} : #{comment.text}" %>
+      </p>
+    <% end %>
+
+
     <p class="comment-text mb-1">ユーザーB：とても楽しかったです！</p>
     <p class="comment-text mb-1">ユーザーC：また来年も行きたいです</p>
     <p class="comment-text mb-1">ユーザーD：微妙でした・・・</p>

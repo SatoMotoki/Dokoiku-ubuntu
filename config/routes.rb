@@ -4,9 +4,12 @@ Rails.application.routes.draw do
 
   root 'pages#top'
 
-  resources :events
-  get 'events/manage'
+  resources :events do
+    resources :comments, only: [:create]
+  end
   
+  get 'events/manage'
+
   # get 'events/edit'
   # get 'events/new'
   # get 'events/index'
