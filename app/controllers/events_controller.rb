@@ -1,5 +1,9 @@
 class EventsController < ApplicationController
 
+  def manage
+    @events = Event.where(user_id: current_user)
+  end
+
   def show
     @event = Event.find_by(id: params[:id])
     @comment = Comment.new
@@ -24,6 +28,12 @@ class EventsController < ApplicationController
       flash.now[:danger] = 'イベント作成に失敗しました'
       render :new
     end
+  end
+
+  def destroy
+    @event = Event.find_by(id: params[:id])
+    @event.destroy
+    redirect_to events_manage_path
   end
 
   private

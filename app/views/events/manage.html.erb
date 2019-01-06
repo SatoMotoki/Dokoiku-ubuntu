@@ -1,59 +1,41 @@
 <div class="events-index-wrapper py-5 bg-light">
   <div class="container">
     <h2 class="main-h2 mb-2">イベント管理</h2>
-    <div class="row manage-event-list mx-0">
-      <div class="col-2 col-lg-1 manage-event-schedule-area">
-        <p class="year">2018</p>
-        <p class="date">12/19</p>
-        <p class="time">(水)16:30〜</p>
+    <% wd = ["日", "月", "火", "水", "木", "金", "土"] %>
+
+    <% @events.each do |event| %>
+      <div class="row manage-event-list mx-0">
+        <div class="col-2 col-lg-1 manage-event-schedule-area">
+          <p class="year">
+            <%= event.start_date.year %>
+          </p>
+          <p class="date">
+            <%= "#{event.start_date.mon}/#{event.start_date.day}" %>
+          </p>
+          <p class="time">
+            <%= "#{event.start_date.strftime("(#{wd[event.start_date.wday]})")}#{event.start_time.hour}:#{event.start_time.strftime("%d")}〜" %>
+          </p>
+        </div>
+        <div class="pl-3">
+          <%= image_tag event.image.url, class: 'manage-event-image', alt: 'イベント画像'%>
+        </div>
+        <div class="col-4 col-md-6 col-lg-5">
+          <p class="manage-event-title">
+            <%= link_to event.title, "/events/#{event.id}" %>
+          </p>
+          <p class="fa fa-map-marker text-muted manage-event-adress pb-0">
+            <%= event.address %>
+          </p>
+        </div>
+        <div class="col-1 offset-lg-3 col-lg-1 pl-0 manage-btn">
+          <button class="btn btn-sm mt-2" type="submit">編集する</button>
+          <%= link_to event_path(event.id), {method: "delete"} do%>
+          <button class="btn btn-sm mt-3" type="submit">削除する</button>
+          <% end %>
+          <!-- <button class="btn btn-sm mt-3" type="submit">削除する</button> -->
+        </div>
       </div>
-      <div class="pl-3">
-        <%= image_tag 'kisetsukan_nai_man.png', class: 'manage-event-image', alt: 'イベント画像'%>
-      </div>
-      <div class="col-4 col-md-6 col-lg-5">
-        <p class="manage-event-title">イベントA</p>
-        <p class="fa fa-map-marker text-muted manage-event-adress pb-0"> 岩手県一関市~~</p>
-      </div>
-      <div class="col-1 offset-lg-3 col-lg-1 pl-0 manage-btn">
-        <button class="btn btn-sm mt-2" type="submit">編集する</button>
-        <button class="btn btn-sm mt-3" type="submit">削除する</button>
-      </div>
-    </div>
-    <div class="row manage-event-list mx-0">
-      <div class="col-2 col-lg-1 manage-event-schedule-area">
-        <p class="year">2018</p>
-        <p class="date">12/19</p>
-        <p class="time">(水)16:30〜</p>
-      </div>
-      <div class="pl-3">
-        <%= image_tag 'kisetsukan_nai_man.png', class: 'manage-event-image', alt: 'イベント画像'%>
-      </div>
-      <div class="col-4 col-md-6 col-lg-5">
-        <p class="manage-event-title">イベントA</p>
-        <p class="fa fa-map-marker text-muted manage-event-adress pb-0"> 岩手県一関市~~</p>
-      </div>
-      <div class="col-1 offset-lg-3 col-lg-1 pl-0 manage-btn">
-        <button class="btn btn-sm mt-2" type="submit">編集する</button>
-        <button class="btn btn-sm mt-3" type="submit">削除する</button>
-      </div>
-    </div>
-    <div class="row manage-event-list mx-0">
-      <div class="col-2 col-lg-1 manage-event-schedule-area">
-        <p class="year">2018</p>
-        <p class="date">12/19</p>
-        <p class="time">(水)16:30〜</p>
-      </div>
-      <div class="pl-3">
-        <%= image_tag 'kisetsukan_nai_man.png', class: 'manage-event-image', alt: 'イベント画像'%>
-      </div>
-      <div class="col-4 col-md-6 col-lg-5">
-        <p class="manage-event-title">イベントA</p>
-        <p class="fa fa-map-marker text-muted manage-event-adress pb-0"> 岩手県一関市~~</p>
-      </div>
-      <div class="col-1 offset-lg-3 col-lg-1 pl-0 manage-btn">
-        <button class="btn btn-sm mt-2" type="submit">編集する</button>
-        <button class="btn btn-sm mt-3" type="submit">削除する</button>
-      </div>
-    </div>
+    <% end %>
+
   </div>
 </div>
