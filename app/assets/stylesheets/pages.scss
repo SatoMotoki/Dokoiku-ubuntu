@@ -9,19 +9,22 @@
   height: 80vh;
 }
 
-.card-body {
-  padding: 0.5rem;
+.card-img-top {
+  height: 50vh;
 
-  .event-title {
-    border-bottom: 1px solid #343a40;
+  .card-body {
+    padding: 0.5rem;
+
+    .event-title {
+      border-bottom: 1px solid #343a40;
+    }
+
+    .event-day {
+      font-size: 80%;
+    }
+
+    .event-adress {
+      font-size: 70% !important;
+    }
   }
-
-  .event-day {
-    font-size: 80%;
-  }
-
-  .event-adress {
-    font-size: 70% !important;
-  }
-
 }
