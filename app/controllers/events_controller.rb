@@ -1,5 +1,9 @@
 class EventsController < ApplicationController
 
+  def edit
+    @event = Event.find_by(id: params[:id])
+  end
+
   def manage
     @events = Event.where(user_id: current_user)
   end
@@ -28,6 +32,16 @@ class EventsController < ApplicationController
       flash.now[:danger] = 'イベント作成に失敗しました'
       render :new
     end
+  end
+
+  def update
+    @event = Event.find_by(id: params[:id])
+    if @event.update(event_params)
+      redirect_to events_manage_path
+    else
+      redirect_to edit_event_path
+    end
+
   end
 
   def destroy

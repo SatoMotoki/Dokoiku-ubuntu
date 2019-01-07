@@ -28,11 +28,12 @@
           </p>
         </div>
         <div class="col-1 offset-lg-3 col-lg-1 pl-0 manage-btn">
-          <button class="btn btn-sm mt-2" type="submit">編集する</button>
+          <%= link_to edit_event_path(event.id) do %>
+            <button class="btn btn-sm mt-2" type="submit">編集する</button>
+          <% end %>
           <%= link_to event_path(event.id), {method: "delete"} do%>
           <button class="btn btn-sm mt-3" type="submit">削除する</button>
           <% end %>
-          <!-- <button class="btn btn-sm mt-3" type="submit">削除する</button> -->
         </div>
       </div>
     <% end %>
