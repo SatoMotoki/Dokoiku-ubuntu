@@ -2,36 +2,76 @@ ja:
   activerecord:
     errors:
       models:
-        user:
+        event:
           attributes:
-            username:
-              taken: "は既に使用されています。"
+            title:
               blank: "が入力されていません。"
               too_short: "は%{count}文字以上に設定して下さい。"
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
               confirmation: "が内容とあっていません。"
-            email:
-              taken: "は既に使用されています。"
+            description:
               blank: "が入力されていません。"
               too_short: "は%{count}文字以上に設定して下さい。"
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
-            password:
-              taken: "は既に使用されています。"
+            start_date:
               blank: "が入力されていません。"
               too_short: "は%{count}文字以上に設定して下さい。"
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
-              confirmation: "が内容とあっていません。"
-            password_confirmation:
-              taken: "は既に使用されています。"
+            start_time:
               blank: "が入力されていません。"
               too_short: "は%{count}文字以上に設定して下さい。"
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
-              confirmation: "が内容とあっていません。"
+            end_date:
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            end_time:
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            venue:
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            address:
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            image:
+              blank: "が選択されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            admission_fee:
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            start_time:
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
     attributes:
+      event:
+        title: "タイトル"
+        description: "イベント詳細"
+        start_time: "開始時間"
+        start_date: "開始日"
+        end_time: "終了時間"
+        end_date: "終了日"
+        venue: "会場"
+        address: "住所"
+        image: "イベント画像"
+        admission_fee: "入場料"
       user:
         current_password: "現在のパスワード"
         username: ユーザー名

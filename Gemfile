@@ -49,6 +49,8 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'dotenv-rails'
   gem 'carrierwave'
   gem 'mini_magick'
+  gem 'rails-i18n'
+  gem 'jQuery-Validation-Engine-rails'
 # =========================
 
 

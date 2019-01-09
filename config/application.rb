@@ -18,6 +18,7 @@ module Dokoiku
 
     # i18n 初期設定
     config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
     # heroku 会員登録メール設定
     config.assets.initialize_on_precompile = false

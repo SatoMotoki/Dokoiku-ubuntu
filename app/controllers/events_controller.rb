@@ -39,7 +39,7 @@ class EventsController < ApplicationController
     if @event.update(event_params)
       redirect_to events_manage_path
     else
-      redirect_to edit_event_path
+      render :edit
     end
 
   end
