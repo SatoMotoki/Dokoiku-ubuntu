@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to "/events/#{params[:event_id]}"
     else
-      render "/events/#{params[:event_id]}"
+      redirect_to "/events/#{params[:event_id]}"
     end
   end
 

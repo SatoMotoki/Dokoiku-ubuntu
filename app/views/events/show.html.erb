@@ -39,6 +39,8 @@
 
     <div class="comment-area pb-2 mb-3">
       <h6 class="comments-title mt-3">コメント</h6>
+
+
       <%= form_for [@event, @comment] do |f| %>
         <%= f.text_area :text, class: "comment-input-text rounded border border-secondary" %>
         <div class="comment-btn mt-2">
