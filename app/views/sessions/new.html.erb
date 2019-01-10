@@ -4,25 +4,36 @@
     <div class="row main-row">
         <div class="offset-md-1 col-md-10">
           <p class="desc-row">会員登録されてない方は<%= link_to "新規会員登録", users_new_path %>をご利用ください。</p>
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <th scope="row">メールアドレス</th>
-                <td>
-                  <input type="text" class="login-form" name="email" value="" />
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">パスワード</th>
-                <td>
-                  <input type="password" class="signup-form" name="password1" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="login-btn">
-            <button class="btn" type="submit">ログインする</button>
-          </div>
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+            <%= devise_error_messages %>
+
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <%= f.label :email %><br />
+                  </th>
+                  <td>
+                    <%= f.email_field :email,autofocus: true, autocomplete: "email", class: "signup-form" %>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <%= f.label :password %><br />
+                  </th>
+                  <td>
+                    <%= f.password_field :password, autocomplete: "current-password", class: "signup-form" %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="login-btn">
+              <%= f.submit "ログインする", class: "btn" %>
+            </div>
+          <% end -%>
+
         </div>
     </div>
   </div>
