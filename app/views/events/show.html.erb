@@ -42,10 +42,12 @@
 
 
       <%= form_for [@event, @comment] do |f| %>
+      <% if user_signed_in? %>
         <%= f.text_area :text, class: "comment-input-text rounded border border-secondary" %>
-        <div class="comment-btn mt-2">
-          <%= f.submit "投稿する", class: "btn btn-sm"%>
-        </div>
+          <div class="comment-btn mt-2">
+            <%= f.submit "投稿する", class: "btn btn-sm"%>
+          </div>
+        <% end %>
       <% end %>
     </div>
 
