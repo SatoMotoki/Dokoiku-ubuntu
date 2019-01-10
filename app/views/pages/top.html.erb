@@ -6,7 +6,9 @@
       <h1 class="jumbotron-heading">どこいく？</h1>
       <p class="lead text-muted">あなたの街のローカルなイベントをもっと盛り上げていこう！</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">イベントを作成する</a>
+        <% unless user_signed_in? %>
+          <%= link_to "イベントを作成する", new_user_session_path, class: "btn btn-primary my-2" %>
+        <% end %>
       </p>
     </div>
   </section>
