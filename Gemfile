@@ -50,7 +50,7 @@ gem 'bcrypt', '~> 3.1.7'
   gem 'carrierwave'
   gem 'mini_magick'
   gem 'rails-i18n'
-  gem 'jQuery-Validation-Engine-rails'
+  gem 'fog-aws'
 # =========================
 
 
