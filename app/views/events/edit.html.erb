@@ -99,10 +99,11 @@
                 </tr>
               </tbody>
             </table>
-            <div class="login-btn">
-              <button class="btn" type="submit">イベント編集する</button>
-            </div>
-
+            <% if @user == current_user %>
+              <div class="login-btn">
+                <button class="btn" type="submit">イベント編集する</button>
+              </div>
+            <% end %>
           <% end %>
         </div>
     </div>
