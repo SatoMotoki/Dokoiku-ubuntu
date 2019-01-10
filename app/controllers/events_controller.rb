@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, only:[:new]
 
   def edit
     @event = Event.find_by(id: params[:id])
@@ -15,7 +16,6 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order(:start_date, :start_time)
-    # wd = ["日", "月", "火", "水", "木", "金", "土"]
 
   end
 

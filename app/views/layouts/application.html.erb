@@ -12,18 +12,8 @@
 
   <body>
 
-    <% if notice.present? %>
-      <div class="alert alert-dismissable alert-success">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <p><%= notice %></p>
-      </div>
-    <% end %>
-
-    <% if alert.present? %>
-      <div class="alert alert-dismissable alert-danger">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <p><%= alert %></p>
-      </div>
+    <% flash.each do |name, value| %>
+      <div class="alert alert-<%= bootstrap_class_for(name) %> m-0 alert-top" role="alert"><%= value %></div>
     <% end %>
 
     <header>
@@ -37,9 +27,6 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <%= link_to "直近のイベント", events_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "カレンダー", "#", class: "nav-link" %>
             </li>
 
             <% if user_signed_in? %>
@@ -62,14 +49,17 @@
         </div>
       </nav>
     </header>
+
     <%= yield %>
+
     <footer class="text-muted">
       <div class="container">
-        <p class="float-right mt-3">
+        <!-- <p class="float-right mt-3">
           <button type="button" class="btn btn-secondary py-auto">お問い合わせ</button>
-        </p>
+        </p> -->
         <p class="copyright pt-5">&copy; 2018 Dokoiku, Inc. All Rights Reserved.</p>
       </div>
     </footer>
+
   </body>
 </html>

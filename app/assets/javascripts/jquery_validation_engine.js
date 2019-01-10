@@ -1,3 +1,3 @@
-$(document).ready(function(){
-  $("#validate_id").validationEngine();
+$(function(){
+  $(".alert-top").fadeOut(5000);
 });
