@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <%= stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag('favicon.ico') %>
   </head>
@@ -13,7 +14,7 @@
   <body>
 
     <% flash.each do |name, value| %>
-      <div class="alert alert-<%= bootstrap_class_for(name) %> m-0 alert-top" role="alert"><%= value %></div>
+      <div class="alert alert-<%= bootstrap_class_for(name) %> flash" role="alert"><%= value %></div>
     <% end %>
 
     <header>
@@ -52,12 +53,9 @@
 
     <%= yield %>
 
-    <footer class="text-muted">
+    <footer>
       <div class="container">
-        <!-- <p class="float-right mt-3">
-          <button type="button" class="btn btn-secondary py-auto">お問い合わせ</button>
-        </p> -->
-        <p class="copyright pt-5">&copy; 2018 Dokoiku, Inc. All Rights Reserved.</p>
+        <p class="copyright">&copy; 2018 Dokoiku, Inc. All Rights Reserved.</p>
       </div>
     </footer>
 

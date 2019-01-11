@@ -1,0 +1,101 @@
+<table class="table table-bordered">
+  <tbody>
+    <div class="form-group">
+      <tr>
+        <th scope="row">
+          <%= f.label :title %>
+        </th>
+        <td>
+          <%= f.text_field :title, autoforcus: true, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+
+    <div class="form-group">
+      <tr>
+        <th scope="row">
+          <%= f.label :description %>
+        </th>
+        <td>
+          <%= f.text_field :description, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+
+    <div class="form-group">
+      <tr>
+        <th scope="row" rowspan="2">
+          <%= f.label "開始日時" %>
+        </th>
+        <td>
+          <%= f.date_field :start_date, class: "form-field" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.time_field :start_time, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+
+    <div class="form-group">
+      <tr>
+        <th scope="row" rowspan="2">
+          <%= f.label "終了日時" %>
+        </th>
+        <td>
+          <%= f.date_field :end_date, class: "form-field"%>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.time_field :end_time, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+
+    <div class="form-group">
+      <tr>
+        <th scope="row">
+          <%= f.label :venue %>
+        </th>
+        <td>
+          <%= f.text_field :venue, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+
+    <div class="form-group">
+      <tr>
+        <th scope="row">
+          <%= f.label :address %>
+        </th>
+        <td>
+          <%= f.text_field :address, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+
+    <div class="form-group">
+      <tr>
+        <th scope="row">
+          <%= f.label :image %>
+        </th>
+        <td>
+          <%= f.file_field :image, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+
+    <div class="form-group">
+      <tr>
+        <th scope="row">
+          <%= f.label :admission_fee %>
+        </th>
+        <td>
+          <%= f.number_field :admission_fee, class: "form-field" %>
+        </td>
+      </tr>
+    </div>
+  </tbody>
+</table>

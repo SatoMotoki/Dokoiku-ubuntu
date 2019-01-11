@@ -4,7 +4,6 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find_by(id: params[:id])
     @user = @event.user
-    # user_session[:id] = current_user.id
   end
 
   def manage
@@ -18,7 +17,6 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order(:start_date, :start_time)
-
   end
 
   def new

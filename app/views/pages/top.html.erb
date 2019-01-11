@@ -1,44 +1,37 @@
+<section class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">どこいく？</h1>
+    <p class="lead text-muted">あなたの街のローカルなイベントをもっと盛り上げていこう！</p>
+    <p>
+      <% unless user_signed_in? %>
+        <%= link_to "イベントを作成する", new_user_session_path, class: "btn btn-primary my-2" %>
+      <% end %>
+    </p>
+  </div>
+</section>
 
-<main role="main">
-
-  <section class="jumbotron jumbotron-fluid text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">どこいく？</h1>
-      <p class="lead text-muted">あなたの街のローカルなイベントをもっと盛り上げていこう！</p>
-      <p>
-        <% unless user_signed_in? %>
-          <%= link_to "イベントを作成する", new_user_session_path, class: "btn btn-primary my-2" %>
-        <% end %>
-      </p>
-    </div>
-  </section>
-
-  <div class="py-5 bg-light">
-    <div class="container">
-      <h2 class="main-h2 mb-4">新着イベント</h2>
-      <div class="row">
-
-        <% @events.first(6).each do |event| %>
-          <div class="col-md-4">
-            <div class="card mb-4">
-              <%= link_to (image_tag event.image.url, class: 'card-img-top', alt: 'イベント画像'), "/events/#{event.id}" %>
-              <div class="card-body">
-                <h5 class="event-title mb-0">
-                  <%= event.title %>
-                </h5>
-                <p class="event-day text-muted mb-0">
-                  <%= event.start_date %>
-                </p>
-                <p class="fa fa-map-marker text-muted event-adress">
-                  <%= event.address%>
-                </p>
-              </div>
+<div class="main">
+  <div class="container">
+    <h2 class="main_h2">新着イベント</h2>
+    <div class="row">
+      <% @events.first(6).each do |event| %>
+        <div class="col-md-4 new_event_item ">
+          <div class="card">
+            <%= link_to (image_tag event.image.url, class: 'card-img-top new_event_image', alt: 'イベント画像'), event_path(id: event.id) %>
+            <div class="card-body">
+              <h5 class="new_event_title">
+                <%= event.title %>
+              </h5>
+              <p class="new_event_date">
+                <%= event.start_date %>
+              </p>
+              <p class="fa fa-map-marker new_event_address">
+                <%= event.address%>
+              </p>
             </div>
           </div>
-        <% end %>
-
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
-
-</main>
+</div>

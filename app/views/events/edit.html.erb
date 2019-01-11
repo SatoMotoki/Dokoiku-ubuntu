@@ -1,111 +1,27 @@
-<div class="py-5 bg-light">
+<div class="main">
   <div class="container">
-    <h2 class="main-h2 mb-4">イベント編集</h2>
-    <div class="row main-row">
+    <h2 class="main_h2">イベント編集</h2>
+    <div class="main_inner">
+      <div class="row">
         <div class="offset-md-1 col-md-10">
-          <p class="desc-row">以下の項目を入力して「イベント編集する」ボタンをクリックしてください。</p>
+          <p>
+            以下の項目を入力して「イベント編集する」ボタンをクリックしてください。
+          </p>
 
-          <% @event.errors.full_messages.each do |message| %>
-           <div class="alert alert-danger ">
-              <p>
-               <%= message %>
-              </p>
-            </div>
-         <% end %>
+          <%= render 'events/shared/EventErrorMessage' %>
 
           <%= form_for @event do |f| %>
-            <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <%= f.label "タイトル" %>
-                  </th>
-                  <td>
-                    <%= f.text_field :title, autoforcus: true, class: "eventcreate-form" %>
-                  </td>
-                </tr>
 
-                <tr>
-                  <th scope="row">
-                    <%= f.label "イベント詳細" %>
-                  </th>
-                  <td>
-                    <%= f.text_field :description, class: "eventcreate-form" %>
-                  </td>
-                </tr>
+            <%= render 'events/shared/EventCreateEditTable', f: f %>
 
-                <tr>
-                  <th scope="row" rowspan="2">
-                    <%= f.label "開始日時" %>
-                  </th>
-                  <td>
-                    <%= f.date_field :start_date, class: "eventcreate-form" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= f.time_field :start_time, class: "eventcreate-form" %>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row" rowspan="2">
-                    <%= f.label "終了日時" %>
-                  </th>
-                  <td>
-                    <%= f.date_field :end_date, class: "eventcreate-form"%>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= f.time_field :end_time, class: "eventcreate-form" %>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">
-                    <%= f.label "会場" %>
-                  </th>
-                  <td>
-                    <%= f.text_field :venue, class: "eventcreate-form" %>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">
-                    <%= f.label "住所" %>
-                  </th>
-                  <td>
-                    <%= f.text_field :address, class: "eventcreate-form" %>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">
-                    <%= f.label "イベント画像" %>
-                  </th>
-                  <td>
-                    <%= f.file_field :image, class: "eventcreate-form" %>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">
-                    <%= f.label "入場料" %>
-                  </th>
-                  <td>
-                    <%= f.number_field :admission_fee, class: "eventcreate-form" %>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
             <% if @user == current_user %>
-              <div class="login-btn">
+              <div class="btn_center">
                 <button class="btn" type="submit">イベント編集する</button>
               </div>
             <% end %>
           <% end %>
         </div>
+      </div>
     </div>
   </div>
 </div>

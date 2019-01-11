@@ -3,24 +3,47 @@
 @import "pages";
 @import "font-awesome";
 @import "users";
-@import "sessions";
 @import "events";
 
-.main-h2 {
-  font-size: 24px;
-  border-bottom: 4px solid #A82400;
-}
-
-.main-row {
-  font-size: .8rem;
-}
-
-.alert-top {
+.flash {
   z-index: 10000;
   position: fixed;
   width: 100%;
 }
 
+.form-field {
+  width: 300px;
+}
+
+// 各ページ共通
+
+.main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f8f9fa;
+}
+
+.main_h2 {
+  font-size: 24px;
+  border-bottom: 4px solid #A82400;
+  margin-bottom: 1.5rem;
+}
+
+
+// イベント作成,編集 会員登録,ログイン共通
+
+.main_inner {
+  font-size: .8rem;
+}
+
+.btn_center {
+  text-align:center;
+}
+
+// フッター
+
 .copyright {
   font-size: 12px;
+  color: #6c757d;
+  padding-top: 3rem;
 }

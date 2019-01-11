@@ -1,8 +1,8 @@
-<div class="py-5 bg-light">
+<div class="main">
   <div class="container">
-    <h2 class="main-h2 mb-4">ログイン・新規登録</h2>
-    <div class="main-row">
-      <p class="desc-row">
+    <h2 class="main_h2">ログイン・新規登録</h2>
+    <div class="main_inner">
+      <p>
         会員の方は、登録時に利用した Twitterのボタンからログインすることができます。<br/>
         また、登録されているメールアドレスからもログインすることができます。<br/>
         会員登録されてない方は、下記 Twitter ボタンからお持ちのアカウントで新規登録を行ってください。<br/>
@@ -34,7 +34,7 @@
               </tr>
             </tbody>
           </table>
-          <div class="login-btn">
+          <div class="btn_center">
             <%= f.submit "ログインする", class: "btn" %>
           </div>
           <% end -%>
@@ -48,7 +48,7 @@
               <%- if devise_mapping.omniauthable? %>
                 <%- resource_class.omniauth_providers.each do |provider| %>
                   <%= link_to  omniauth_authorize_path(resource_name, provider) do %>
-                    <div class="login-btn">
+                    <div class="btn_center">
                       <button class="btn btn-sm mt-2 btn-primary fa fa-twitter" type="submit"> Twitterで登録/ログイン</button>
                     </div>
                   <% end -%>
