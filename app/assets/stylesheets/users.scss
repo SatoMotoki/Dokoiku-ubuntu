@@ -1,6 +1,9 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 新規会員登録ページ
+
 .type {
   display: block;
   color: #009FE6;
@@ -10,24 +13,32 @@
   display: block;
 }
 
-.signup-main {
-  font-size: .8rem;
-}
+// ログインページ
 
-th {
-  vertical-align: middle !important;
-  font-weight: normal;
-}
+.login_wrapper {
+  padding-top: 0.5rem;
 
-.signup-btn {
-  text-align:center;
-}
+  .login_area {
+    margin-bottom: 3rem;
+  }
 
-.fa-twitter {
-  font-size: 1rem;
-  font-weight: bold;
-}
+  .login_sns_area {
+    height: 20vh;
+    border: 1px solid #dee2e6;
 
-.login-sns-area {
-  height: 130px;
+    .login_sns_inner {
+      text-align: center;
+      margin-top: 1rem;
+
+      .login_twitter_btn {
+        padding: 0.25rem 0.5rem;
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
 }

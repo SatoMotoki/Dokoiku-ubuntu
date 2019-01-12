@@ -2,99 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// イベント詳細ページ
+// イベント管理、直近イベントページ
 
-.comment-area {
-  border-bottom: 1px solid #E6E6E6;
-}
-
-.comment-input-text {
-  width: 100%;
-}
-
-.comment-btn {
-  text-align: right;
-}
-
-.comment-text {
-  border-bottom: 1px dotted #777;
-}
-
-// イベント詳細ページ
-
-.events-index-wrapper {
+.event_list {
   font-size: 12px;
-}
-
-.index-event-list {
-  border-bottom: 1px solid #CCC;
-  padding-left: 110px;
-  margin-bottom: 10px;
-  position: relative;
-
-  .index-event-schedule-area {
-    position: absolute;
-    margin-top: 15px;
-    left: 0;
-    text-align: center;
-    padding-right: 10px;
-    width: 100px;
-    font-weight: bold;
-  }
-
-  .year {
-    margin: 0;
-    text-align: left;
-    line-height: 1;
-    font-weight: normal;
-  }
-
-  .date {
-    margin: 0;
-    font-size: 2em;
-  }
-
-}
-
-.upcoming-event-inner {
-  position: relative;
-  padding-left: 114px;
-  min-height: 100px;
-
-  .index-event-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 95px;
-    font-size: 0;
-  }
-
-  .index-event-title {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: underline;
-    padding-top: 28px;
-    margin: 0;
-  }
-
-  .index-event-adress {
-    padding-top: 8px;
-    margin: 0;
-  }
-}
-
-.edit-btn {
-  text-align: right;
-}
-
-// イベント管理ページ
-
-.manage-event-list {
   border-bottom: 1px solid #CCC;
   margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
 
-  .manage-event-schedule-area {
+  .event-schedule {
     margin-top: 15px;
     text-align: center;
     font-weight: bold;
@@ -112,31 +29,74 @@
     }
   }
 
-    .manage-event-image {
+  .event_image_area {
+    padding-left: 1rem;
+
+    .event_image {
       width: 100px;
       height: 95px;
     }
-
-    .manage-event-title {
-      font-size: 1.5em;
-      font-weight: bold;
-      text-decoration: underline;
-      padding-top: 28px;
-      margin: 0;
-    }
-
-    .manage-event-adress {
-      padding-top: 8px;
-      margin: 0;
-    }
-
-    .manage-btn {
-      text-align: right;
-    }
-
-    .modal-body {
-      font-size: 18px;
-    }
   }
 
-// イベント管理ページ
+  .event_title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 28px;
+    margin: 0;
+  }
+
+  .event_address {
+    padding-top: 8px;
+    margin: 0;
+    color: #6c757d;
+  }
+
+  .btn-modify {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .modal-body {
+    font-size: 18px;
+  }
+}
+
+// イベント詳細ページ
+
+.event_info_area {
+  border-bottom: 1px solid #6c757d;
+}
+
+.comment_area {
+  border-bottom: 1px solid #E6E6E6;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+
+  .comment_head {
+    margin-top: 1rem;
+  }
+
+  .comment_field {
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid #6c757d;
+  }
+
+  .btn_right {
+    text-align: right;
+
+    .btn_comment {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.comment_list {
+  border-bottom: 1px dotted #777;
+  margin-bottom: 0.25rem;
+}

@@ -1,0 +1,24 @@
+<div class="col-2 col-lg-1 event-schedule">
+  <p class="year">
+    <%= event.start_date.year %>
+  </p>
+  <p class="date">
+    <%= "#{event.start_date.mon}/#{event.start_date.day}" %>
+  </p>
+  <p class="time">
+    <%= "#{event.start_date.strftime("(#{wd[event.start_date.wday]})")}#{event.start_time.hour}:#{event.start_time.strftime("%d")}〜" %>
+  </p>
+</div>
+
+<div class="event_image_area">
+  <%= image_tag event.image.url, class: 'event_image', alt: 'イベント画像'%>
+</div>
+
+<div class="col-4 col-md-6 col-lg-5">
+  <p class="event_title">
+    <%= link_to event.title, event_path(id: event.id) %>
+  </p>
+  <p class="fa fa-map-marker event_address">
+    <%= event.address %>
+  </p>
+</div>

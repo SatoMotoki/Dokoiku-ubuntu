@@ -1,38 +1,17 @@
-<div class="events-index-wrapper main">
+<div class="main">
   <div class="container">
     <h2 class="main_h2">イベント管理</h2>
 
     <% @events.each do |event| %>
-      <div class="row manage-event-list mx-0">
-        <div class="col-2 col-lg-1 manage-event-schedule-area">
-          <p class="year">
-            <%= event.start_date.year %>
-          </p>
-          <p class="date">
-            <%= "#{event.start_date.mon}/#{event.start_date.day}" %>
-          </p>
-          <p class="time">
-            <%= "#{event.start_date.strftime("(#{wd[event.start_date.wday]})")}#{event.start_time.hour}:#{event.start_time.strftime("%d")}〜" %>
-          </p>
-        </div>
-        <div class="pl-3">
-          <%= image_tag event.image.url, class: 'manage-event-image', alt: 'イベント画像'%>
-        </div>
-        <div class="col-4 col-md-6 col-lg-5">
-          <p class="manage-event-title">
-            <%= link_to event.title, "/events/#{event.id}" %>
-          </p>
-          <p class="fa fa-map-marker text-muted manage-event-adress pb-0">
-            <%= event.address %>
-          </p>
-        </div>
-        <div class="col-1 offset-lg-3 col-lg-1 pl-0 manage-btn">
+      <div class="row event_list">
+        <%= render 'events/shared/EventList', event: event %>
+        <div class="offset-lg-3 col-1 col-lg-1 btn_center">
           <%= link_to edit_event_path(event.id) do %>
-            <button class="btn btn-sm mt-2" type="submit">編集する</button>
+            <button class="btn btn-modify" type="submit">編集する</button>
           <% end %>
 
           <!-- 切り替えボタンの設定 -->
-          <button type="button" class="btn btn-sm mt-3" data-toggle="modal" data-target="#myModal">
+          <button type="button" class="btn btn-modify mt-3" data-toggle="modal" data-target="#myModal">
             削除する
           </button>
 
@@ -56,14 +35,13 @@
                   <%= link_to event_path(event.id), {method: "delete"} do%>
                     <button type="button" class="btn">削除する</button>
                   <% end %>
-                </div><!-- /.modal-footer -->
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
     <% end %>
-
   </div>
 </div>

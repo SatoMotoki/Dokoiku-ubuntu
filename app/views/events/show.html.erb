@@ -4,7 +4,7 @@
     <h2 class="main_h2">
       <%= @event.title %>
     </h2>
-    <div class="row border-bottom border-secondary">
+    <div class="row event_info_area">
       <div class="col-md-6">
 
         <%= image_tag @event.image.url, class: 'card-img-top', alt: 'イベント画像'%>
@@ -36,22 +36,20 @@
       </div>
     </div>
 
-    <div class="comment-area pb-2 mb-3">
-      <h6 class="comments-title mt-3">コメント</h6>
-
-
+    <div class="comment_area">
+      <h6 class="comment_head">コメント</h6>
       <%= form_for [@event, @comment] do |f| %>
-      <% if user_signed_in? %>
-        <%= f.text_area :text, class: "comment-input-text rounded border border-secondary" %>
-          <div class="comment-btn mt-2">
-            <%= f.submit "投稿する", class: "btn btn-sm"%>
+        <% if user_signed_in? %>
+          <%= f.text_area :text, class: "comment_list" %>
+          <div class="btn_right">
+            <%= f.submit "投稿する", class: "btn btn_comment"%>
           </div>
         <% end %>
       <% end %>
     </div>
 
     <% @event.comments.each do |comment| %>
-      <p class="comment-text mb-1">
+      <p class="comment_text">
         <%= "#{comment.user.username} : #{comment.text}" %>
       </p>
     <% end %>
