@@ -4,9 +4,9 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.event_id = params[:event_id]
     if @comment.save
-      redirect_to "/events/#{params[:event_id]}"
+      redirect_to event_path(id: params[:event_id]), success: 'コメントしました'
     else
-      redirect_to "/events/#{params[:event_id]}"
+      redirect_to event_path(id: params[:event_id])
     end
   end
 
