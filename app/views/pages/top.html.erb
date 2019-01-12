@@ -23,7 +23,7 @@
                 <%= event.title %>
               </h5>
               <p class="new_event_date">
-                <%= event.start_date %>
+                <%= "#{event.start_date.strftime("%Y/%-m/ %d")}" %>
               </p>
               <p class="fa fa-map-marker new_event_address">
                 <%= event.address%>
